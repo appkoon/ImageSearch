@@ -1,4 +1,4 @@
-이미지검색 어플리케이션 (카카오 이미지검색 API)
+이미지검색 어플리케이션
 ===================
 
 Uses ViewModels and LiveData from Architecture Components
