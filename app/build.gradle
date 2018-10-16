@@ -52,9 +52,6 @@ dependencies {
     implementation deps.lifecycle.java8
     kapt deps.lifecycle.compiler
 
-    implementation deps.room.runtime
-    kapt deps.room.compiler
-
     implementation deps.dagger.runtime
     implementation deps.dagger.android
     implementation deps.dagger.android_support
