@@ -17,9 +17,6 @@ import com.seongheonson.kakakoimagesearch.vo.Document
 import com.seongheonson.kakakoimagesearch.common.getResizedHeight
 
 
-/**
- * Created by seongheonson on 2018. 10. 12..
- */
 
 class ImageAdapter(private val documents:MutableList<Document>, context: Context) : RecyclerView.Adapter<ImageHolder>() {
 

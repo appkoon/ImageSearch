@@ -7,9 +7,6 @@ import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
-/**
- * Created by seongheonson on 2018. 10. 12..
- */
 @Module(includes = [ViewModelModule::class])
 class AppModule {
 
@@ -18,12 +15,6 @@ class AppModule {
     fun provideContext(application: Application): Context {
         return application
     }
-
-//    @Singleton
-//    @Provides
-//    fun provideKakaoService(): KakaoService {
-//        return ApiRequest().getKakaoService()
-//    }
 
     @Singleton
     @Provides

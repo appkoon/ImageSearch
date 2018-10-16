@@ -7,10 +7,6 @@ import io.reactivex.schedulers.Schedulers
 import retrofit2.Response
 
 
-/**
- * Created by seongheonson on 2018. 10. 12..
- */
-
 class ApiRequest {
 
     companion object {

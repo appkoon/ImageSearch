@@ -6,8 +6,6 @@ import java.text.SimpleDateFormat
 fun getResizedHeight(imageWidth: Int, imageHeight:Int, displayWidth: Int) : Int {
     val rate = (displayWidth.toFloat() / imageWidth.toFloat())
     val resizeHeight = (imageHeight.toFloat() * rate)
-//    Log.e("good", "getResize = $imageWidth x $imageHeight = ${imageWidth / imageHeight} " +
-//                                       "/ $displayWidth x $resizeHeight = ${displayWidth.toFloat() / resizeHeight}")
      return  resizeHeight.toInt()
 }
 

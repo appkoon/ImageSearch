@@ -9,9 +9,6 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject
 
-/**
- * Created by seongheonson on 2018. 10. 12..
- */
 
 class App : Application(), HasActivityInjector {
 
@@ -20,7 +17,6 @@ class App : Application(), HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
-        // initialize Dagger
         AppInjector.init(this)
         Fresco.initialize(this)
     }

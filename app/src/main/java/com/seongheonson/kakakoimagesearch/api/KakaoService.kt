@@ -7,10 +7,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 
-/**
- * Created by seongheonson on 2018. 10. 12..
- */
-
 interface KakaoService {
 
     @GET("search/image")

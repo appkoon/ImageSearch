@@ -7,9 +7,6 @@ import retrofit2.Response
 import javax.inject.Inject
 import javax.inject.Singleton
 
-/**
- * Created by seongheonson on 2018. 10. 12..
- */
 @Singleton
 class KakaoRepository @Inject constructor(private val kakaoService: KakaoService) {
 

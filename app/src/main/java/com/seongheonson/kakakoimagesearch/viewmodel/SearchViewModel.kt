@@ -22,16 +22,15 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 
-/**
- * Created by seongheonson on 2018. 10. 13..
- */
 @Singleton
 open class SearchViewModel @Inject constructor(private val repository: KakaoRepository) : ViewModel() {
+
 
     private var page = 1
     private var size = 10
     var query = ""
     private var isEnd = false
+    val delayTime = 1000L
 
     val messageLiveData: LiveData<String> by lazy { MutableLiveData<String>() }
     val responseLiveData: LiveData<List<Document>> by lazy { MutableLiveData<List<Document>>() }
@@ -62,7 +61,7 @@ open class SearchViewModel @Inject constructor(private val repository: KakaoRepo
                             isEnd = response.meta.is_end
                             page++
                         }
-                    }, 1000)
+                    }, delayTime)
                 } else {
                     (messageLiveData as MutableLiveData<*>).value = Error.NO_MORE_DATA.value
                 }

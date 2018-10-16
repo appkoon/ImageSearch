@@ -17,14 +17,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--<com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/draweeView"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        app:actualImageScaleType="fitCenter"
-        app:imageUrlFresco="@{document.image_url}"
-        />-->
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"

@@ -17,9 +17,6 @@ import com.seongheonson.kakakoimagesearch.di.Injectable
 import com.seongheonson.kakakoimagesearch.ui.MainActivity
 import com.seongheonson.kakakoimagesearch.vo.Document
 
-/**
- * Created by seongheonson on 2018. 10. 12..
- */
 
 class DetailFragment : Fragment(), Injectable {
 
@@ -52,10 +49,6 @@ class DetailFragment : Fragment(), Injectable {
         }
 
         arguments?.getParcelable<Document>(KEY_DATA)?.let { document ->
-//            draweeView.setImageURI(document.image_url)
-//            text_size.text = "이미지 크기 : ${document.width} x ${document.height}"
-//            text_sitename.text = "이미지 출처 : ${document.display_sitename}\n(${document.doc_url})"
-//            text_date.text = "작성일시 : ${changeDateFormat(document.datetime)}"
             binding.document = document
         }
     }

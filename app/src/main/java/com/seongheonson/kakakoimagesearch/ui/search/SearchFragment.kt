@@ -35,9 +35,6 @@ import kotlinx.android.synthetic.main.fragment_search.*
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
-/**
- * Created by seongheonson on 2018. 10. 12..
- */
 class SearchFragment : Fragment(), Injectable {
 
     @Inject
