@@ -8,13 +8,13 @@ import android.databinding.ObservableField
 import android.databinding.ObservableInt
 import android.os.Handler
 import android.util.Log
-import com.seongheonson.kakakoimagesearch.vo.Document
-import com.seongheonson.kakakoimagesearch.vo.ImageSearch
+import com.seongheonson.kakakoimagesearch.api.ApiRequest
 import com.seongheonson.kakakoimagesearch.api.ApiResponse
 import com.seongheonson.kakakoimagesearch.api.Error
-import com.seongheonson.kakakoimagesearch.api.ApiRequest
 import com.seongheonson.kakakoimagesearch.api.Status
 import com.seongheonson.kakakoimagesearch.repository.KakaoRepository
+import com.seongheonson.kakakoimagesearch.vo.Document
+import com.seongheonson.kakakoimagesearch.vo.ImageSearch
 import retrofit2.HttpException
 import java.io.IOException
 import java.net.SocketTimeoutException
@@ -26,7 +26,7 @@ import javax.inject.Singleton
  * Created by seongheonson on 2018. 10. 13..
  */
 @Singleton
-class SearchViewModel @Inject constructor(private val repository: KakaoRepository) : ViewModel() {
+open class SearchViewModel @Inject constructor(private val repository: KakaoRepository) : ViewModel() {
 
     private var page = 1
     private var size = 10

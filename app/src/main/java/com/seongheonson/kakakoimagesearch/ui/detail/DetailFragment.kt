@@ -1,6 +1,7 @@
 package com.seongheonson.kakakoimagesearch.ui.detail
 
 import android.annotation.SuppressLint
+import android.databinding.DataBindingComponent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -8,8 +9,9 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
-import com.seongheonson.kakakoimagesearch.common.KEY_DATA
 import com.seongheonson.kakakoimagesearch.R
+import com.seongheonson.kakakoimagesearch.binding.FragmentDataBindingComponent
+import com.seongheonson.kakakoimagesearch.common.KEY_DATA
 import com.seongheonson.kakakoimagesearch.databinding.FragmentDetailBinding
 import com.seongheonson.kakakoimagesearch.di.Injectable
 import com.seongheonson.kakakoimagesearch.ui.MainActivity
@@ -23,6 +25,8 @@ class DetailFragment : Fragment(), Injectable {
 
     lateinit var binding: FragmentDetailBinding
 
+    private var dataBindingComponent: DataBindingComponent = FragmentDataBindingComponent(this)
+
     companion object {
         fun newInstance(repoBundle: Bundle?): DetailFragment {
             val fragment = DetailFragment()
@@ -33,7 +37,7 @@ class DetailFragment : Fragment(), Injectable {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         super.onCreateView(inflater, container, savedInstanceState)
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail, container, false, dataBindingComponent)
         return binding.root
     }
 

@@ -17,39 +17,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.facebook.drawee.view.SimpleDraweeView
+    <!--<com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/draweeView"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         app:actualImageScaleType="fitCenter"
-        app:imageUrl="@{document.image_url}"
-        />
+        app:imageUrlFresco="@{document.image_url}"
+        />-->
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/description"
+        android:scaleType="fitCenter"
+        app:imageUrlGlide="@{document.image_url}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_size"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="18dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="@{@string/image_size(document.width, document.height)}"
-        tools:text="이미지 크기 : 000 x 000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/draweeView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        tools:text="이미지 크기 : 000 x 000" />
 
     <TextView
         android:id="@+id/text_sitename"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:text="@{@string/image_site(document.display_sitename, document.doc_url)}"
-        tools:text="이미지 출처 : 다음 블로그"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_size" />
+        app:layout_constraintTop_toBottomOf="@+id/text_size"
+        tools:text="이미지 출처 : 다음 블로그" />
 
     <TextView
         android:id="@+id/text_date"
@@ -59,10 +76,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="@{@string/image_date(UtilsKt.changeDateFormat(document.datetime))}"
-        tools:text="생성일시 : "
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_sitename" />
+        app:layout_constraintTop_toBottomOf="@+id/text_sitename"
+        tools:text="생성일시 : " />
 
 </android.support.constraint.ConstraintLayout>
 

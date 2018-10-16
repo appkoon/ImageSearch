@@ -12,7 +12,7 @@ object BindingAdapters {
         view.visibility = if (show) View.VISIBLE else View.GONE
     }
     @JvmStatic
-    @BindingAdapter("imageUrl")
+    @BindingAdapter("imageUrlFresco")
     fun bindImage(imageView: SimpleDraweeView, url: String?) {
         imageView.setImageURI(url)
     }

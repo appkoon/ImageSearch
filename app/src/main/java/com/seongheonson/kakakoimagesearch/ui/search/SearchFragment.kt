@@ -18,10 +18,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import com.jakewharton.rxbinding2.widget.RxTextView
-import com.seongheonson.kakakoimagesearch.common.KEY_DATA
 import com.seongheonson.kakakoimagesearch.R
-import com.seongheonson.kakakoimagesearch.vo.Document
 import com.seongheonson.kakakoimagesearch.api.Status
+import com.seongheonson.kakakoimagesearch.common.KEY_DATA
 import com.seongheonson.kakakoimagesearch.databinding.FragmentSearchBinding
 import com.seongheonson.kakakoimagesearch.di.Injectable
 import com.seongheonson.kakakoimagesearch.ui.Action
@@ -29,6 +28,7 @@ import com.seongheonson.kakakoimagesearch.ui.ActionManager
 import com.seongheonson.kakakoimagesearch.ui.ActionType
 import com.seongheonson.kakakoimagesearch.ui.MainActivity
 import com.seongheonson.kakakoimagesearch.viewmodel.SearchViewModel
+import com.seongheonson.kakakoimagesearch.vo.Document
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.fragment_search.*
@@ -38,7 +38,6 @@ import javax.inject.Inject
 /**
  * Created by seongheonson on 2018. 10. 12..
  */
-
 class SearchFragment : Fragment(), Injectable {
 
     @Inject
@@ -47,7 +46,7 @@ class SearchFragment : Fragment(), Injectable {
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
 
-    private val searchViewModel: SearchViewModel by lazy {
+    val searchViewModel: SearchViewModel by lazy {
         ViewModelProviders.of(this, viewModelFactory).get(SearchViewModel::class.java)
     }
 

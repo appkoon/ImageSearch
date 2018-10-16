@@ -1,7 +1,7 @@
 package com.seongheonson.kakakoimagesearch.repository
 
-import com.seongheonson.kakakoimagesearch.vo.ImageSearch
 import com.seongheonson.kakakoimagesearch.api.KakaoService
+import com.seongheonson.kakakoimagesearch.vo.ImageSearch
 import io.reactivex.Single
 import retrofit2.Response
 import javax.inject.Inject
